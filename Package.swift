@@ -8,6 +8,9 @@ import PackageDescription
 
 let package = Package(
     name: "Lightstreamer_tvOS_Client",
+    platforms: [
+        .tvOS("9.0")
+    ],
     products: [
         .library(
             name: "Lightstreamer_tvOS_Client", 
