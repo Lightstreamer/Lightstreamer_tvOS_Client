@@ -14,11 +14,23 @@ let package = Package(
     products: [
         .library(
             name: "Lightstreamer_tvOS_Client", 
-            targets: ["Lightstreamer_tvOS_Client"]
+            targets: ["Lightstreamer_tvOS_Client_Wrapper"]
         )
     ],
     dependencies: [],
     targets: [
+        .target(
+            name: "Lightstreamer_tvOS_Client_Wrapper",
+            dependencies: [
+                .target(name: "Lightstreamer_tvOS_Client")
+            ],
+            path: "Sources",
+            linkerSettings: [
+                .linkedLibrary("iconv"),
+                .linkedFramework("Security"),
+                .linkedFramework("SystemConfiguration")
+            ]
+        ),
         .binaryTarget(
             name: "Lightstreamer_tvOS_Client", 
             url: "https://www.lightstreamer.com/repo/cocoapods/ls-tvos-client/4.3.0/ls-tvos-client-4.3.0.zip", 
