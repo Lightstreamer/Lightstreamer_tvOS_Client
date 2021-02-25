@@ -33,8 +33,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "Lightstreamer_tvOS_Client", 
-            url: "https://www.lightstreamer.com/repo/cocoapods/ls-tvos-client/4.3.0/ls-tvos-client-4.3.0.zip", 
-            checksum: "c7cbf16b2de9e327f69788ca2d5df5ee61cb9db2995b7a3c821ad1b4738ae684"
+            url: "https://www.lightstreamer.com/repo/cocoapods/ls-tvos-client/4.3.1/ls-tvos-client-4.3.1.zip", 
+            checksum: "1ca3148dc6d43fc68a90c4901e8c1197d3dc923125f0c2a13d655f4c41d16303"
         )
     ]
 )
